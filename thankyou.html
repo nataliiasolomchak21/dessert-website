@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for ordering at Yum & Crumb">
+    <meta name="keywords" content="order confirmed, thank you page, thank you, dessert order success">
+    <meta name="author" content="Nataliia Solomchak">
+    <title>Thank you</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Italiana&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Menu -->
+    <div id="navbar-placeholder"></div>
+    <div class="thank-you">
+        <img src="/images/icons8-check.gif" alt="check mark" width="100">
+        <h1 style="margin-bottom: 1rem;">Thank you</h1>
+        <h2>Thank you for contacting us, we’ll be in touch shortly</h2>
+        <button type="button" class="btn btn-primary btn-lg">
+            <a href="./index.html" aria-label="Go to Home page">Go to Home page</a>
+        </button>
+    </div>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- Navbar and footer include script -->
+    <script>
+        Promise.all([
+            fetch('menu.html').then(res => res.text()),
+            fetch('footer.html').then(res => res.text())
+        ]).then(([menuHtml, footerHtml]) => {
+            document.getElementById("navbar-placeholder").innerHTML = menuHtml;
+            document.getElementById("footer-placeholder").innerHTML = footerHtml;
+        })
+    </script>
+</body>
+
+</html>

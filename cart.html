@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="View and manage your selected desserts in the shopping cart. Update quantities and remove items, proceed to checkout">
+  <meta name="keywords" content="dessert cart, online ordering, checkout">
+  <meta name="author" content="Nataliia Solomchak">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="./css/cart.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Italiana&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Menu -->
+  <div id="navbar-placeholder"></div>
+  <!-- Confirmation toast -->
+  <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" id="order-toast"
+    style="position: fixed; z-index: 1055; background-color: #66E4AB; right: 1rem; top: 1rem;">
+    <div class="d-flex">
+      <div class="toast-body">
+        Thank you. Your order has been processed
+      </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  <!-- Products -->
+  <section class="p-3" style="background-color: #EACBC2;">
+    <h1 class="desserts-heading p-4">Available for order</h2>
+      <div class="desserts-box container">
+        <div class="row">
+          <!-- Product Cards Column -->
+          <div class="col-lg-7">
+            <div class="row row-cols-1 row-cols-md-2 g-4" id="products" style="max-width: 35rem;">
+              <!-- Product card -->
+              <div class="col">
+                <div class="card">
+                  <img src="/images/cheesecake.jpg" class="card-img-top" alt="cheesecake">
+                  <div class="card-body">
+                    <h5 class="card-title">Cheesecake</h5>
+                    <p class="card-text">$7.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="/images/choco-cookie.jpg" class="card-img-top" alt="choco cookie">
+                  <div class="card-body">
+                    <h5 class="card-title">Chocolate cookie</h5>
+                    <p class="card-text">$3.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="/images/cinnamon-roll.jpg" class="card-img-top" alt="cinnamon roll">
+                  <div class="card-body">
+                    <h5 class="card-title">Cinnamon roll</h5>
+                    <p class="card-text">$3.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="/images/donuts.jpg" class="card-img-top" alt="donuts">
+                  <div class="card-body">
+                    <h5 class="card-title">Donuts</h5>
+                    <p class="card-text">$3.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="/images/eclair.jpg" class="card-img-top" alt="eclair">
+                  <div class="card-body">
+                    <h5 class="card-title">Eclair</h5>
+                    <p class="card-text">$4.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="/images/lemon-cupcake.jpg" class="card-img-top" alt="lemon cupcake">
+                  <div class="card-body">
+                    <h5 class="card-title">Lemon cupcake</h5>
+                    <p class="card-text">$3.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="/images/panakota.jpg" class="card-img-top" alt="panna cotta">
+                  <div class="card-body">
+                    <h5 class="card-title">Panna cotta</h5>
+                    <p class="card-text">$5.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="/images/waffle.jpg" class="card-img-top" alt="waffle">
+                  <div class="card-body">
+                    <h5 class="card-title">Waffle</h5>
+                    <p class="card-text">$5.00</p>
+                    <button class="add-to-cart-btn btn btn-primary" aria-label="Add to Cart">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cart Column -->
+          <div class="col-lg-5">
+            <div id="cart-wrapper">
+              <div id="cart-empty">
+                <img src="/images/icons8-cart.gif" alt="cart" class="p-2" width="100"
+                  style="margin-left: auto; margin-right: auto;">
+                <p>Nothing in the cart.</p>
+              </div>
+              <!-- Cart contents if not empty -->
+              <div id="cart" class="cart">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Navbar and footer include script -->
+  <script>
+    Promise.all([
+      fetch('menu.html').then(res => res.text()),
+      fetch('footer.html').then(res => res.text())
+    ]).then(([menuHtml, footerHtml]) => {
+      document.getElementById("navbar-placeholder").innerHTML = menuHtml;
+      document.getElementById("footer-placeholder").innerHTML = footerHtml;
+    })
+  </script>
+  <script src="/js/cart.js"></script>
+</body>
+
+</html>

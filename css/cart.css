@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Italiana&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #EACBC2;
+  font-family: "Instrument Sans", sans-serif;;
+}
+
+.desserts-heading {
+  font-family: "Italiana", sans-serif;
+  font-weight: 600;
+}
+
+.desserts-box {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.add-to-cart-btn {
+  background-color: #443434 !important;
+  border-color: #443434 !important;
+}
+
+.card {
+  width: 15rem;
+  min-height: 7rem;
+  border: none;
+}
+
+#cart-wrapper {
+  margin-top: 1rem;
+  background-color: #f8f9fa;
+  min-height: 50vh;
+  padding: 1.5rem;
+  border-radius: .5rem;
+}
+
+#cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cart {
+  display: none;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+}
+
+.quantity-input {
+  width: 60px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 12px;
+  position: sticky;
+  top: 20px;
+}
+
+.checkout-btn {
+  background-color: #443434 !important;
+  border-color: #443434 !important;
+  transition: transform 0.2s;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+}
+
+.remove-btn {
+  color: #dc2626;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  color: #991b1b;
+}
+
+.quantity-btn {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #f3f4f6;
+  border: none;
+  transition: all 0.2s;
+}
+
+.quantity-btn:hover {
+  background: #e5e7eb;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    #cart-wrapper {
+      margin-top: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #cart-wrapper {
+      min-width: 28rem;
+    }
+}

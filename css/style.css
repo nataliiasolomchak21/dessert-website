@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Italiana&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+/*  Nav menu */
+.navbar {
+    background-color: #423434;
+}
+
+.navbar-brand,
+.heading-about,
+.testimonials-heading {
+    font-family: "Italiana", sans-serif;
+}
+
+.nav-link, 
+.btn-primary, 
+.list li {
+    font-family: "Instrument Sans", sans-serif;
+}
+
+/* Home page (hero section) */
+.hero-section {
+    background-color: #EACBC2;
+    padding: 5rem 0;
+}
+
+.hero-title {
+    font-family: "Italiana", sans-serif;;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-family: "Instrument Sans", sans-serif;
+    color: #423434;
+}
+
+@media (max-width: 767.98px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        margin: 2rem auto 0;
+    }
+}
+
+/* Home page (services section) */
+.icon {
+    margin-bottom: 1rem;
+}
+
+p, .paragraph {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: "Instrument Sans", sans-serif;
+    color: #423434;
+}
+
+/*  About page */
+.heading-about {
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.list li {
+    color: aliceblue;
+    line-height: 25px;
+    font-size: .9rem;
+}
+
+.testimonials {
+    padding: 3rem;
+}
+
+.testimonials-heading {
+    background-color: #EACBC2;
+    padding: 1rem;
+    font-weight: 700;
+}
+
+/* Thank you page */
+.thank-you {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.thank-you img,
+.thank-you h1, 
+.thank-you h2 {
+    margin-bottom: 2rem;
+}
+
+.thank-you h2 {
+    text-align: center;
+}
+
+.thank-you .btn {
+    background-color: #423434;
+    border-color: #423434;
+}
+
+.thank-you button a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+@media (max-width: 1440px) {
+    .contact-section {
+        min-height: 100vh;
+    }
+    .footer {
+        height: 1rem;
+    }
+}
